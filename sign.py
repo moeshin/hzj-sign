@@ -2,6 +2,7 @@
 import http.client
 import json
 import os
+import time
 import urllib.parse
 
 
@@ -18,6 +19,7 @@ def sign(token, address='', location='', trip=False):
         'CONTENT': '',
         'IDS': '',
         'token': token,
+        'time': int(time.time() * 1000),
     }))
     res = conn.getresponse()
     body = res.read()
