@@ -9,7 +9,7 @@
 | 字段       | 说明                        |
 |----------|---------------------------|
 | token    | 账号凭证                      |
-| trip     | 是否出差，默认 `true`            |
+| trip     | 是否出差，默认 `false`           |
 | address  | 可空，中文地址                   |
 | location | 可空，经纬度                    |
 | pushplus | 可空，[PushPlus] 消息推送的 Token |
