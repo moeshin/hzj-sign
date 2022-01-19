@@ -35,9 +35,9 @@ def sign(token, address='', location='', trip=False):
 
 
 def push_plus_notify(token, title, content, template='html'):
-    args = json.dumps(locals())
+    body = json.dumps(locals())
     conn = http.client.HTTPSConnection('www.pushplus.plus')
-    conn.request('POST', '/send/', args)
+    conn.request('POST', '/send/', body)
     res = conn.getresponse()
     body = res.read()
     try:
@@ -50,7 +50,7 @@ def push_plus_notify(token, title, content, template='html'):
         status = http.HTTPStatus(code).phrase
     except ValueError:
         status = ''
-    raise Exception('%d %s\n%s' % (code, status, str(body, 'utf-8')))
+    print('PushPlus 通知失败：%d %s\n%s' % (code, status, str(body, 'utf-8')))
 
 
 def main():
