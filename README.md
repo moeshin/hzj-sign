@@ -25,3 +25,7 @@
 如：`116.422522-39.901873`，可通过 https://tool.lu/coordinate/ 获取。
 
 [PushPlus]: https://www.pushplus.plus/
+
+### 定时执行
+
+搜索引擎搜索，自行配置：`crontab`、`windows 计划任务`、`宝塔计划任务` 等。
