@@ -8,24 +8,35 @@
 
 | 字段       | 说明                        |
 |----------|---------------------------|
-| token    | 账号凭证                      |
-| trip     | 是否出差，默认 `false`           |
-| address  | 可空，中文地址                   |
-| location | 可空，经纬度                    |
+| sign     | 签到配置                      |
 | pushplus | 可空，[PushPlus] 消息推送的 Token |
 
-### `token` 账号凭证
+### `sign` 签到配置
 
-登录 http://gzdk.gzisp.net/hzjmui/mui/login.html 后，  
-按 `F12` 调出 `开发者工具`，查看 `应用` - `会话存储空间` 里的 `token` 值。  
-或在 `控制台` 中执行 `sessionStorage.token` 查看。
+| 字段           | 说明                                           |
+|--------------|----------------------------------------------|
+| url          | 学校服务器链接                                      |
+| token        | 账号凭证                                         |
+| trip         | 是否出差，默认 `false`                              |
+| address      | 可空，中文地址                                      |
+| x            | 可空，经度                                        |
+| y            | 可空，纬度                                        |
+| studentId    | 可空，学生 id                                     |
+| internshipId | 可空，实习 id                                     |
+| checkType    | 可空，签到类型：<br>`CHECKIN` 签到（默认）<br>`SIGNOFF` 签退 |
+| attachIds    | 可空，附件 id                                     |
 
-### `location` 经纬度
+### 从浏览器控制台获取配置
 
-如：`116.422522-39.901873`，可通过 https://tool.lu/coordinate/ 获取。
+登录：http://gzdk.gzisp.net/hzjmui/mui/login.html  
+执行 [console.js](./console.js) 里的内容
 
-[PushPlus]: https://www.pushplus.plus/
+### 经纬度
+
+可通过 https://tool.lu/coordinate/ 获取。
 
 ### 定时执行
 
 搜索引擎搜索，自行配置：`crontab`、`windows 计划任务`、`宝塔计划任务` 等。
+
+[PushPlus]: https://www.pushplus.plus/
