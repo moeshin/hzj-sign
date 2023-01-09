@@ -6,6 +6,8 @@
 
 创建或编辑 `config.json` 文件
 
+![image](https://user-images.githubusercontent.com/28248888/211381066-09ce1a18-fd69-4287-95cc-e3c11e6bedc5.png)
+
 | 字段       | 说明                        |
 |----------|---------------------------|
 | sign     | 签到配置                      |
